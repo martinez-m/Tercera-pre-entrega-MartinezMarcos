@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Producto</title>
+</head>
+<body>
+    <h1>Buscar Producto</h1>
+    
+    <!-- Formulario de búsqueda -->
+    <form method="get" action="{% url 'buscar_producto' %}">
+        <input type="text" name="q" placeholder="Nombre del producto" value="{{ query }}">
+        <button type="submit">Buscar</button>
+    </form>
+    
+    <!-- Mostrar resultados -->
+    {% if resultados %}
+        <h2>Resultados:</h2>
+        <ul>
+            {% for producto in resultados %}
+                <li>{{ producto.nombre }} - ${{ producto.precio }}</li>
+            {% endfor %}
+        </ul>
+    {% elif query %}
+        <p>No se encontraron productos que coincidan con "{{ query }}".</p>
+    {% endif %}
+</body>
+</html>
