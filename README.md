@@ -1,5 +1,5 @@
-Tienda Online
-Este proyecto es una aplicación web desarrollada con Django que permite gestionar productos en una tienda online. Utiliza el patrón de diseño MVT (Modelo-Vista-Template).
+El proyecto Tienda Online
+trata de una aplicación web desarrollada con Django la cual permite gestionar productos en una tienda online. Utiliza el patrón de diseño MVT.
 
 La aplicación incluye funcionalidades para agregar, y buscar productos en la base de datos.
 
